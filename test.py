@@ -13,7 +13,8 @@ cursor.execute(insert_query, user)
 
 users = [
     (2, 'steven', 'asdf'),
-    (3, 'david', 'zxc')
+    (3, 'david', 'zxc'),
+    (4, 'abc', 'abc')
 ]
 cursor.executemany(insert_query, users)
 
