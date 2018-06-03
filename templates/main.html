@@ -3,11 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Main Title</title>
 </head>
 
 <body>
-    <p>Main works</p>
+    <p>List all entries</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: ItemsGrid.itemsList">
+            <tr>
+                <td data-bind="text: data.name"></td>
+                <td data-bind="text: data.price"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="{{url_for('static', filename='knockout-3.4.2.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='jquery-3.3.1.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='itemsclient.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='itemsgrid.js')}}"></script>
+
+
 </body>
 
 </html>
